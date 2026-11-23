@@ -18,7 +18,7 @@ jobs:
       - name: Launch using supplied command
         run: sh launch.txt
       - name: Validate health and production config
-        run: python scripts/smoke.py
+        run: sleep 3 && python scripts/smoke.py
       - name: Container diagnostics and cleanup
         if: always()
         run: |
